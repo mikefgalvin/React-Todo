@@ -7,8 +7,11 @@ const TodoItem = props => {
     }
 
     return (
-        <div onClick={itemClick} className={`listItem${props.item.completed ? ' completed' : ''}`}>
+        <div className={`listItem${props.item.completed ? ' completed' : ''}`}>
                 <p>{props.item.task}</p> 
+                <div onClick={itemClick} className = 'checkmark'>
+                    <p><span>&#10003;</span></p>
+                </div>
         </div>
     )
 }
